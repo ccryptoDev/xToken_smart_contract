@@ -27,14 +27,17 @@ module.exports = {
       accounts: [`0x${privateKey}`],
     },
     kovan: {
-      url: "https://kovan.poa.network",
-      accounts: { mnemonic: mnemonic },
+      // url: "https://kovan.poa.network",
+      url: "https://kovan.infura.io/v3/" + infuraKey,
+      gas: 10000000,
+      // accounts: { mnemonic: mnemonic },
+      accounts: [`0x${privateKey}`]
     },
-    testnet: {
+    bsctest: {
       url: "https://data-seed-prebsc-1-s1.binance.org:8545/",
       accounts: { mnemonic: mnemonic },
     },
-    main: {
+    bscmain: {
       url: "https://bsc-dataseed.binance.org/",
       accounts: { mnemonic: mnemonic },
     },
