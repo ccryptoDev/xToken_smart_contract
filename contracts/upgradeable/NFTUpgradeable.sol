@@ -22,7 +22,7 @@ contract NFTUpgradeable is
     string private _baseURIextended;
     string public baseExtension = ".json";
     uint256 lastTokenId;
-
+    uint256 totalABCAmount;
     event MintFinished(address to, uint256 _tokenId);
 
     /**
@@ -118,6 +118,9 @@ contract NFTUpgradeable is
         _safeMint(_to, _id, "");
         incrementTokenId();
 
+        // accumulate ABC amount
+        totalABCAmount += _tokenAmount;
+
         emit MintFinished(_to, _id);
     }
 
@@ -166,6 +169,13 @@ contract NFTUpgradeable is
 
     function incrementTokenId() internal {
         lastTokenId++;
+    }
+
+    /*
+    *  @notice get totalABCAmount 
+    */
+    function getTotalABCAmount() public view returns (uint256) {
+        return totalABCAmount;
     }
 
     /**

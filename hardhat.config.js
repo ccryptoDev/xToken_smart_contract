@@ -26,6 +26,10 @@ module.exports = {
       gas: 10000000,
       accounts: [`0x${privateKey}`],
     },
+    kovan: {
+      url: "https://kovan.poa.network",
+      accounts: { mnemonic: mnemonic },
+    },
     testnet: {
       url: "https://data-seed-prebsc-1-s1.binance.org:8545/",
       accounts: { mnemonic: mnemonic },
