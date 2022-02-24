@@ -1,6 +1,3 @@
-/**
- *Submitted for verification at BscScan.com on 2021-05-03
- */
 
 // File: ../../../.brownie/packages/OpenZeppelin/openzeppelin-contracts@4.1.0/contracts/proxy/Proxy.sol
 
