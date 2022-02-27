@@ -11,38 +11,36 @@ module.exports = {
     settings: {
       optimizer: {
         enabled: true,
-        runs: 10,
-      },
-    },
+        runs: 10
+      }
+    }
   },
   networks: {
     mainnet: {
       url: "https://mainnet.infura.io/v3/" + infuraKey,
       gas: 10000000,
-      accounts: [`0x${privateKey}`],
+      accounts: [`0x${privateKey}`]
     },
     rinkeby: {
       url: "https://rinkeby.infura.io/v3/" + infuraKey,
       gas: 10000000,
-      accounts: [`0x${privateKey}`],
-    },
-    kovan: {
-      // url: "https://kovan.poa.network",
-      url: "https://kovan.infura.io/v3/" + infuraKey,
-      gas: 10000000,
-      // accounts: { mnemonic: mnemonic },
       accounts: [`0x${privateKey}`]
     },
-    bsctest: {
+    kovan: {
+      url: "https://kovan.infura.io/v3/" + infuraKey,
+      gas: 10000000,
+      accounts: [`0x${privateKey}`]
+    },
+    testnet: {
       url: "https://data-seed-prebsc-1-s1.binance.org:8545/",
-      accounts: { mnemonic: mnemonic },
+      accounts: { mnemonic: mnemonic }
     },
-    bscmain: {
+    main: {
       url: "https://bsc-dataseed.binance.org/",
-      accounts: { mnemonic: mnemonic },
-    },
+      accounts: { mnemonic: mnemonic }
+    }
   },
   etherscan: {
-    apiKey: apiKey,
-  },
+    apiKey: apiKey
+  }
 };
